@@ -1,0 +1,5 @@
+typedef int ADT;
+typedef struct N{
+ADT data;//数据类型
+struct N*next;//指针域，指向后续结点的指针
+}
