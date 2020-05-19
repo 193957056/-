@@ -2,4 +2,61 @@ typedef int ADT;
 typedef struct N{
 ADT data;//数据类型
 struct N*next;//指针域，指向后续结点的指针
+}Node;
+
+//管理结点的类型定义为：
+typedef struct{
+ Node *head,*tail;//首元结点和尾结点的地址
+ unsigned size;
+}List;
+
+//设计生成新结点的函数并编码
+Node* make node(ADT d){
+Node *np = malloc(sizeof(Node));
+  if(!np)
+    return (void*)0;
+  np->data = d;
+  np->next = (void*)0;
+  return p;
 }
+
+//设计初始结点的函数并编码
+List* init_list(List* lp){
+lp->head = lp->tail = (void*)0;
+lp->size = 0;
+return p;
+}
+
+//设计清空链表的函数并编码
+List* clear_list(List* lp){
+while(lp->head){
+  Node* del = lp->head;
+  lp->head = del->next;
+  free(del);
+}
+lp->tail = (void*)0;
+lp->size = 0;
+return lp;
+}
+
+//设计在链表头部插入一个元素（结点）的函数并编码
+List* clear_list(List* lp) 
+{    while( lp->head ) 
+     {   Node* del = lp->head; 
+         lp->head = del->next; 
+         free(del); 
+     }
+     lp->tail = (void*)0; 
+     lp->size = 0; 
+     return   lp; 
+}
+
+
+
+
+
+
+
+
+
+
